@@ -1,0 +1,33 @@
+
+.grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+
+    .grid-row{
+
+        margin: 0px 0;
+
+        &:before,
+        &:after{
+            content: "";
+            min-height: 1px;
+            clear: both;
+            display: block;
+        }
+
+        [class*="grid-col-"]{ //good to know
+            float: left;
+            padding: 0 10px; //gutter
+            min-height: 1px;
+        }
+        @for $i from 1  through 12 {
+            .grid-col-#{$i} {
+                width: 100%;
+             @media screen and (min-width: 768px){
+                width: ((100% / 12) * $i);
+             }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import 'grid';
+@import 'reset';
+@import 'page-header';
+@import 'section-armory';
+@import 'page-footer';
+
+body{
+    color: #F8B700;
+    font-family: 'Lato', Times, sans-serif;
+
+}
+
+.wrapper{
+    background: #211510;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    width: 100vw;
+}
