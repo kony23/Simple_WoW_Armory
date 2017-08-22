@@ -129,7 +129,7 @@
   .section-armory .container {
     width: 100%;
     max-width: 1400px;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -223,6 +223,14 @@
           text-align: right;
           line-height: 500%;
           text-transform: uppercase; }
+          .section-armory .container .armory-image .armory-stats .armory-stats-box span {
+            font-size: 0.5rem; }
+            @media screen and (min-width: 420px) {
+              .section-armory .container .armory-image .armory-stats .armory-stats-box span {
+                font-size: 1rem; } }
+            @media screen and (min-width: 768px) {
+              .section-armory .container .armory-image .armory-stats .armory-stats-box span {
+                font-size: 1.5rem; } }
 
 /* ---- page footer ---- */
 .page-footer {
