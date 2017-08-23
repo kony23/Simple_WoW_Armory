@@ -3,14 +3,7 @@ import ReactDOM from 'react-dom';
 import PageHeader from './components/pageHeader.jsx';
 import SectionArmory from './components/sectionArmory.jsx';
 import PageFooter from './components/pageFooter.jsx';
-import {
-    Router,
-    Route,
-    Link,
-    IndexLink,
-    IndexRoute,
-    hashHistory
-} from 'react-router';
+import {Router, Route, Link, IndexLink, IndexRoute, hashHistory} from 'react-router';
 require('../sass/main.scss');
 
 
@@ -25,8 +18,9 @@ document.addEventListener('DOMContentLoaded', function(){
             return(
                 <div className="wrapper">
                     <PageHeader/>
-                    <SectionArmory/>
+                    {this.props.children}
                     <PageFooter/>
+
                 </div>
             )
         }
@@ -35,7 +29,9 @@ document.addEventListener('DOMContentLoaded', function(){
     class Races extends React.Component{
         render(){
             return(
-                <h1>Podstrona w budowie</h1>
+                <div className="build">
+                    <h1>Podstrona w budowie ;)</h1>
+                </div>
             )
         }
     }
@@ -43,7 +39,9 @@ document.addEventListener('DOMContentLoaded', function(){
     class Classes extends React.Component{
         render(){
             return(
-                <h1>Podstrona w budowie</h1>
+                <div className="build">
+                    <h1>Podstrona w budowie ;)</h1>
+                </div>
             )
         }
     }
@@ -51,30 +49,32 @@ document.addEventListener('DOMContentLoaded', function(){
     class AboutMe extends React.Component{
         render(){
             return(
-                <h1>Podstrona w budowie</h1>
+                <div className="build">
+                    <h1>Podstrona w budowie ;)</h1>
+                </div>
             )
         }
     }
 
     class App extends React.Component{
         render(){
-            // return(
-            //     <Router>
-            //         <Route path='/' component={Template}>
-            //             <IndexRoute component={SectionArmory}/>
-            //             <Route path='/rasy' component={Races}/>
-            //             <Route path='/klasy' component={Classes}/>
-            //             <Route path='/omnie' component={AboutMe}/>
-            //         </Route>
-            //     </Router>
-            // );
             return(
-                <div className="wrapper">
-                    <PageHeader/>
-                    <SectionArmory/>
-                    <PageFooter/>
-                </div>
-            )
+                <Router history={hashHistory}>
+                    <Route path='/' component={Template}>
+                        <IndexRoute component={SectionArmory}/>
+                        <Route path='/rasy' component={Races}/>
+                        <Route path='/klasy' component={Classes}/>
+                        <Route path='/omnie' component={AboutMe}/>
+                    </Route>
+                </Router>
+            );
+            // return(
+            //     <div className="wrapper">
+            //         <PageHeader/>
+            //         <SectionArmory/>
+            //         <PageFooter/>
+            //     </div>
+            // )
         }
     }
 

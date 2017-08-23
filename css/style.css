@@ -125,10 +125,11 @@
 /* ---- section-armory ---- */
 .section-armory {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   .section-armory .container {
     width: 100%;
-    max-width: 1400px;
     margin-top: 80px;
     margin-bottom: 20px;
     display: flex;
@@ -147,7 +148,7 @@
         text-align: center; }
         @media screen and (min-width: 768px) {
           .section-armory .container .armory-welcome h1 {
-            font-size: 1.5rem; } }
+            font-size: 2rem; } }
       .section-armory .container .armory-welcome p {
         color: #EBDEC2;
         font-size: 0.8rem;
@@ -218,19 +219,28 @@
           justify-content: space-between;
           align-items: flex-end; }
         .section-armory .container .armory-image .armory-stats .armory-stats-box {
-          width: 50%;
+          width: 100%;
           height: 15%;
           text-align: right;
           line-height: 500%;
           text-transform: uppercase; }
           .section-armory .container .armory-image .armory-stats .armory-stats-box span {
-            font-size: 0.5rem; }
+            font-size: 0.8rem; }
             @media screen and (min-width: 420px) {
               .section-armory .container .armory-image .armory-stats .armory-stats-box span {
                 font-size: 1rem; } }
             @media screen and (min-width: 768px) {
               .section-armory .container .armory-image .armory-stats .armory-stats-box span {
                 font-size: 1.5rem; } }
+            .section-armory .container .armory-image .armory-stats .armory-stats-box span :after {
+              content: '';
+              width: 100px;
+              height: 100px;
+              background-color: #F8B700;
+              border-radius: 100px;
+              position: absolute;
+              top: 0px;
+              left: 0px; }
 
 /* ---- page footer ---- */
 .page-footer {
@@ -280,4 +290,12 @@ body {
   background: #211510;
   background-image: url("../images/background.jpg");
   background-size: cover;
-  width: 100vw; }
+  width: 100%; }
+
+.build {
+  height: 500px;
+  display: flex;
+  justify-content: center; }
+  .build h1 {
+    margin-top: 80px;
+    color: #fff; }

@@ -27,8 +27,10 @@ export function getRace(race){
         6: "Tauren",
         7: "Gnome",
         8: "Troll",
-        9: "Blood Elf",
-        10: "Draenei",
+        9: "Goblin",
+        10: "Blood Elf",
+        11: "Draenei",
+        22: "Worgen",
         25: "Pandaren"
     }
 

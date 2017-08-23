@@ -1,6 +1,7 @@
 //pageHeader.jsx
 
 import React from 'react';
+import {Router, Route, Link, IndexLink, IndexRoute, hashHistory} from 'react-router';
 
 export default class PageHeader extends React.Component{
     render(){
@@ -12,10 +13,10 @@ export default class PageHeader extends React.Component{
                         </a>
                         <nav className="page-nav">
                             <ul>
-                                <li><a>Armory</a></li>
-                                <li><a>Rasy</a></li>
-                                <li><a>Klasy</a></li>
-                                <li><a>O mnie</a></li>
+                                <li><Link to='/'>Armory</Link></li>
+                                <li><Link to='/rasy'>Rasy</Link></li>
+                                <li><Link to='/klasy'>Klasy</Link></li>
+                                <li><Link to='/omnie'>O mnie</Link></li>
                             </ul>
                         </nav>
                     </div>

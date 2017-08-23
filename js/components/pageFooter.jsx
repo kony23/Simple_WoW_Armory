@@ -1,6 +1,7 @@
 //pageFooter.jsx
 
 import React from 'react';
+import {Router, Route, Link, IndexLink, IndexRoute, hashHistory} from 'react-router';
 
 export default class PageFooter extends React.Component{
     render(){
@@ -9,10 +10,10 @@ export default class PageFooter extends React.Component{
                 <div className="container">
                     <div className="footer-nav">
                         <ul>
-                            <li><a href="">Armory</a></li>
-                            <li><a href="">Rasy</a></li>
-                            <li><a href="">Klasy</a></li>
-                            <li><a href="">O mnie</a></li>
+                            <li><Link to='/'>Armory</Link></li>
+                            <li><Link to='/rasy'>Rasy</Link></li>
+                            <li><Link to='/klasy'>Klasy</Link></li>
+                            <li><Link to='/omnie'>O mnie</Link></li>
                         </ul>
                     </div>
                     <div className="footer-terms">

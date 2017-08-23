@@ -48,10 +48,16 @@ export default class ArmorySearch extends React.Component{
     }
 
     handleClick = e => {
-        console.log(this.setURL(this.state.region ,this.state.serverName, this.state.characterName));
         let url = this.setURL(this.state.region ,this.state.serverName, this.state.characterName);
         this.getStats(url);
 
+    }
+
+    handleKeyPress = e => {
+        if(e.key == 'Enter'){
+            let url = this.setURL(this.state.region ,this.state.serverName, this.state.characterName);
+            this.getStats(url);
+        }
     }
 
     setURL(region, serverName, characterName){
@@ -120,9 +126,14 @@ export default class ArmorySearch extends React.Component{
                     mastery: masteryRating,
                     versatility: data.stats.versatility,
                     imageLink: linkData,
-                });
+                })
+                }).catch( error => {
+                    console.log(error);
+                    this.setState({
+                        data: false
+                    });
 
-            });
+                });
     }
 
     render(){
@@ -135,16 +146,16 @@ export default class ArmorySearch extends React.Component{
         return(
             <div>
                 <div className="armory-search">
-                    <form className="armory-search-form">
+                    <form onKeyPress={this.handleKeyPress} className="armory-search-form">
                         <label htmlFor="region">Wybierz region</label>
                         <select onChange={this.handleChangeRegion} value={this.state.region} id="region" name="region" >
                             <option value="1">EU</option>
                             <option value="2">US</option>
                         </select>
                         <label htmlFor="server">Podaj nazwę serwera</label>
-                        <input onChange={this.handleChangeServer} value={this.state.serverName} autoComplete="on" id="server" name="serverName" type="text"/>
+                        <input onChange={this.handleChangeServer} value={this.state.serverName} autoComplete="on" id="server" name="serverName" type="text" placeholder="Burning Legion"/>
                         <label htmlFor="character">Podaj nazwę postaci</label>
-                        <input onChange={this.handleChangeCharacter} value={this.state.characterName} autoComplete="on" id="character" name="characterName" type="text"/>
+                        <input onChange={this.handleChangeCharacter} value={this.state.characterName} autoComplete="on" id="character" name="characterName" type="text" placeholder="Därnok"/>
                         <div onClick={this.handleClick} className="form-button"><span>Wyświetl</span></div>
                     </form>
                 </div>
