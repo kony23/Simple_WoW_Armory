@@ -1,5 +1,5 @@
 .grid-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto; }
   .grid-container .grid-row {
     margin: 0px 0; }
@@ -242,6 +242,125 @@
               top: 0px;
               left: 0px; }
 
+/* ---- section-races ---- */
+.section-races-classes .box {
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border: 1px solid #504137; }
+  .section-races-classes .box .image {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover; }
+  .section-races-classes .box .human {
+    background-image: url("../images/races/human.jpg"); }
+  .section-races-classes .box .dwarf {
+    background-image: url("../images/races/dwarf.jpg"); }
+  .section-races-classes .box .nelf {
+    background-image: url("../images/races/nightelf.jpg"); }
+  .section-races-classes .box .gnome {
+    background-image: url("../images/races/gnome.jpg"); }
+  .section-races-classes .box .draenei {
+    background-image: url("../images/races/draenei.jpg"); }
+  .section-races-classes .box .worgen {
+    background-image: url("../images/races/worgen.jpg"); }
+  .section-races-classes .box .panda {
+    background-image: url("../images/races/pandarena.jpg"); }
+  .section-races-classes .box .orc {
+    background-image: url("../images/races/orc.jpg"); }
+  .section-races-classes .box .undead {
+    background-image: url("../images/races/undead.jpg"); }
+  .section-races-classes .box .tauren {
+    background-image: url("../images/races/tauren.jpg"); }
+  .section-races-classes .box .troll {
+    background-image: url("../images/races/troll.jpg"); }
+  .section-races-classes .box .belf {
+    background-image: url("../images/races/bloodelf.jpg"); }
+  .section-races-classes .box .goblin {
+    background-image: url("../images/races/goblin.jpg"); }
+  .section-races-classes .box .pandh {
+    background-image: url("../images/races/pandarenh.jpg"); }
+  .section-races-classes .box .warrior {
+    background-image: url("../images/classes/warr.jpg"); }
+  .section-races-classes .box .hunter {
+    background-image: url("../images/classes/hunt.jpg"); }
+  .section-races-classes .box .priest {
+    background-image: url("../images/classes/priest.jpg"); }
+  .section-races-classes .box .shaman {
+    background-image: url("../images/classes/sham.jpg"); }
+  .section-races-classes .box .warlock {
+    background-image: url("../images/classes/lock.jpg"); }
+  .section-races-classes .box .druid {
+    background-image: url("../images/classes/druid.jpg"); }
+  .section-races-classes .box .paladin {
+    background-image: url("../images/classes/pally.jpg"); }
+  .section-races-classes .box .rogue {
+    background-image: url("../images/classes/rogue.jpg"); }
+  .section-races-classes .box .dk {
+    background-image: url("../images/classes/dk.jpg"); }
+  .section-races-classes .box .mage {
+    background-image: url("../images/classes/mage.jpg"); }
+  .section-races-classes .box .monk {
+    background-image: url("../images/classes/monk.jpg"); }
+  .section-races-classes .box .dh {
+    background-image: url("../images/classes/demon.jpg"); }
+  .section-races-classes .box .content {
+    font-size: 1.5rem;
+    background-color: #211510;
+    padding: 10px;
+    height: 150px; }
+    .section-races-classes .box .content p {
+      display: block;
+      color: #EBDEC2;
+      font-size: 0.8rem;
+      padding: 10px 0px; }
+
+.section-races-classes .box:hover {
+  border: 1px solid #F8B700; }
+  .section-races-classes .box:hover .content {
+    color: #fff; }
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 80px; }
+  .welcome h1 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .welcome h1 {
+        font-size: 2rem; } }
+  .welcome p {
+    color: #EBDEC2;
+    font-size: 0.8rem;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .welcome p {
+        font-size: 1rem; } }
+
+.faction {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  .faction span {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 6rem;
+    padding-right: 20px; }
+  .faction .logo img {
+    width: 77.5px; }
+
 /* ---- page footer ---- */
 .page-footer {
   display: flex;
@@ -288,9 +407,12 @@ body {
 
 .wrapper {
   background: #211510;
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-  width: 100%; }
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
 
 .build {
   height: 500px;

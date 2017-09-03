@@ -11,14 +11,13 @@ export default class PageFooter extends React.Component{
                     <div className="footer-nav">
                         <ul>
                             <li><Link to='/'>Armory</Link></li>
-                            <li><Link to='/rasy'>Rasy</Link></li>
-                            <li><Link to='/klasy'>Klasy</Link></li>
-                            <li><Link to='/omnie'>O mnie</Link></li>
+                            <li><Link to='/rasy'>Races</Link></li>
+                            <li><Link to='/klasy'>Classes</Link></li>
                         </ul>
                     </div>
                     <div className="footer-terms">
-                        <p>Wszystkie grafiki na stronie pochodzą z gry World of Warcraft® i należą do ©2004 Blizzard Entertainment, Inc.</p>
-                        <p>©2004 Blizzard Entertainment, Inc. Wszystkie prawa zastrzeżone. World of Warcraft, Warcraft i Blizzard Entertainment są znakami towarowymi lub zarejestrowanymi znakami towarowymi Blizzard Entertainment, Inc. w USA i/lub innych krajach.</p>
+                        <p>All images on site are from the game World of Warcraft® and belongs to ©2004 Blizzard Entertainment, Inc.</p>
+                        <p>©2004 Blizzard Entertainment, Inc. All rights reserved. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.</p>
                     </div>
                 </div>
             </footer>

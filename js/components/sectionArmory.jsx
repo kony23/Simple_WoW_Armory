@@ -8,8 +8,8 @@ export default class SectionArmory extends React.Component{
             <section className="section-armory">
                 <div className="container">
                     <div className="armory-welcome">
-                        <h1>Witaj na mojej stronie o grze World of Warcraft!</h1>
-                        <p>Poniżej możesz zobaczyć swoją postać i sprawdzić jej statystyki na wybranym serwerze</p>
+                        <h1>Welcome to my site about World of Warcraft!</h1>
+                        <p>Below you can check statistics of every character on US and EU servers</p>
                     </div>
                     <ArmorySearch/>
                 </div>

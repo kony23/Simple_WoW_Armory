@@ -2,6 +2,7 @@
 @import 'reset';
 @import 'page-header';
 @import 'section-armory';
+@import 'section-races';
 @import 'page-footer';
 
 body{
@@ -12,9 +13,12 @@ body{
 
 .wrapper{
     background: #211510;
-    background-image: url('../images/background.jpg');
-    background-size: cover;
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: auto;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .build{

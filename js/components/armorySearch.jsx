@@ -147,16 +147,16 @@ export default class ArmorySearch extends React.Component{
             <div>
                 <div className="armory-search">
                     <form onKeyPress={this.handleKeyPress} className="armory-search-form">
-                        <label htmlFor="region">Wybierz region</label>
+                        <label htmlFor="region">Choose region</label>
                         <select onChange={this.handleChangeRegion} value={this.state.region} id="region" name="region" >
                             <option value="1">EU</option>
                             <option value="2">US</option>
                         </select>
-                        <label htmlFor="server">Podaj nazwę serwera</label>
+                        <label htmlFor="server">Enter server name</label>
                         <input onChange={this.handleChangeServer} value={this.state.serverName} autoComplete="on" id="server" name="serverName" type="text" placeholder="Burning Legion"/>
-                        <label htmlFor="character">Podaj nazwę postaci</label>
+                        <label htmlFor="character">Enter character name</label>
                         <input onChange={this.handleChangeCharacter} value={this.state.characterName} autoComplete="on" id="character" name="characterName" type="text" placeholder="Därnok"/>
-                        <div onClick={this.handleClick} className="form-button"><span>Wyświetl</span></div>
+                        <div onClick={this.handleClick} className="form-button"><span>Display</span></div>
                     </form>
                 </div>
                 {component}

@@ -13811,6 +13811,14 @@ var _pageFooter = __webpack_require__(247);
 
 var _pageFooter2 = _interopRequireDefault(_pageFooter);
 
+var _sectionRaces = __webpack_require__(248);
+
+var _sectionRaces2 = _interopRequireDefault(_sectionRaces);
+
+var _sectionClasses = __webpack_require__(250);
+
+var _sectionClasses2 = _interopRequireDefault(_sectionClasses);
+
 var _reactRouter = __webpack_require__(63);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -13821,7 +13829,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-__webpack_require__(248);
+__webpack_require__(249);
 
 console.log("Simple WoW Armory");
 
@@ -13863,15 +13871,7 @@ document.addEventListener('DOMContentLoaded', function () {
         _createClass(Races, [{
             key: 'render',
             value: function render() {
-                return _react2.default.createElement(
-                    'div',
-                    { className: 'build' },
-                    _react2.default.createElement(
-                        'h1',
-                        null,
-                        'Podstrona w budowie ;)'
-                    )
-                );
+                return _react2.default.createElement(_sectionRaces2.default, null);
             }
         }]);
 
@@ -13890,50 +13890,15 @@ document.addEventListener('DOMContentLoaded', function () {
         _createClass(Classes, [{
             key: 'render',
             value: function render() {
-                return _react2.default.createElement(
-                    'div',
-                    { className: 'build' },
-                    _react2.default.createElement(
-                        'h1',
-                        null,
-                        'Podstrona w budowie ;)'
-                    )
-                );
+                return _react2.default.createElement(_sectionClasses2.default, null);
             }
         }]);
 
         return Classes;
     }(_react2.default.Component);
 
-    var AboutMe = function (_React$Component4) {
-        _inherits(AboutMe, _React$Component4);
-
-        function AboutMe() {
-            _classCallCheck(this, AboutMe);
-
-            return _possibleConstructorReturn(this, (AboutMe.__proto__ || Object.getPrototypeOf(AboutMe)).apply(this, arguments));
-        }
-
-        _createClass(AboutMe, [{
-            key: 'render',
-            value: function render() {
-                return _react2.default.createElement(
-                    'div',
-                    { className: 'build' },
-                    _react2.default.createElement(
-                        'h1',
-                        null,
-                        'Podstrona w budowie ;)'
-                    )
-                );
-            }
-        }]);
-
-        return AboutMe;
-    }(_react2.default.Component);
-
-    var App = function (_React$Component5) {
-        _inherits(App, _React$Component5);
+    var App = function (_React$Component4) {
+        _inherits(App, _React$Component4);
 
         function App() {
             _classCallCheck(this, App);
@@ -13952,17 +13917,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         { path: '/', component: Template },
                         _react2.default.createElement(_reactRouter.IndexRoute, { component: _sectionArmory2.default }),
                         _react2.default.createElement(_reactRouter.Route, { path: '/rasy', component: Races }),
-                        _react2.default.createElement(_reactRouter.Route, { path: '/klasy', component: Classes }),
-                        _react2.default.createElement(_reactRouter.Route, { path: '/omnie', component: AboutMe })
+                        _react2.default.createElement(_reactRouter.Route, { path: '/klasy', component: Classes })
                     )
                 );
-                // return(
-                //     <div className="wrapper">
-                //         <PageHeader/>
-                //         <SectionArmory/>
-                //         <PageFooter/>
-                //     </div>
-                // )
             }
         }]);
 
@@ -25269,7 +25226,7 @@ var PageHeader = function (_React$Component) {
                                 _react2.default.createElement(
                                     _reactRouter.Link,
                                     { to: '/rasy' },
-                                    'Rasy'
+                                    'Races'
                                 )
                             ),
                             _react2.default.createElement(
@@ -25278,16 +25235,7 @@ var PageHeader = function (_React$Component) {
                                 _react2.default.createElement(
                                     _reactRouter.Link,
                                     { to: '/klasy' },
-                                    'Klasy'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    _reactRouter.Link,
-                                    { to: '/omnie' },
-                                    'O mnie'
+                                    'Classes'
                                 )
                             )
                         )
@@ -27658,12 +27606,12 @@ var SectionArmory = function (_React$Component) {
                         _react2.default.createElement(
                             'h1',
                             null,
-                            'Witaj na mojej stronie o grze World of Warcraft!'
+                            'Welcome to my site about World of Warcraft!'
                         ),
                         _react2.default.createElement(
                             'p',
                             null,
-                            'Poni\u017Cej mo\u017Cesz zobaczy\u0107 swoj\u0105 posta\u0107 i sprawdzi\u0107 jej statystyki na wybranym serwerze'
+                            'Below you can check statistics of every character on US and EU servers'
                         )
                     ),
                     _react2.default.createElement(_armorySearch2.default, null)
@@ -27867,7 +27815,7 @@ var ArmorySearch = function (_React$Component) {
                         _react2.default.createElement(
                             'label',
                             { htmlFor: 'region' },
-                            'Wybierz region'
+                            'Choose region'
                         ),
                         _react2.default.createElement(
                             'select',
@@ -27886,13 +27834,13 @@ var ArmorySearch = function (_React$Component) {
                         _react2.default.createElement(
                             'label',
                             { htmlFor: 'server' },
-                            'Podaj nazw\u0119 serwera'
+                            'Enter server name'
                         ),
                         _react2.default.createElement('input', { onChange: this.handleChangeServer, value: this.state.serverName, autoComplete: 'on', id: 'server', name: 'serverName', type: 'text', placeholder: 'Burning Legion' }),
                         _react2.default.createElement(
                             'label',
                             { htmlFor: 'character' },
-                            'Podaj nazw\u0119 postaci'
+                            'Enter character name'
                         ),
                         _react2.default.createElement('input', { onChange: this.handleChangeCharacter, value: this.state.characterName, autoComplete: 'on', id: 'character', name: 'characterName', type: 'text', placeholder: 'D\xE4rnok' }),
                         _react2.default.createElement(
@@ -27901,7 +27849,7 @@ var ArmorySearch = function (_React$Component) {
                             _react2.default.createElement(
                                 'span',
                                 null,
-                                'Wy\u015Bwietl'
+                                'Display'
                             )
                         )
                     )
@@ -28193,7 +28141,7 @@ var PageFooter = function (_React$Component) {
                                 _react2.default.createElement(
                                     _reactRouter.Link,
                                     { to: '/rasy' },
-                                    'Rasy'
+                                    'Races'
                                 )
                             ),
                             _react2.default.createElement(
@@ -28202,16 +28150,7 @@ var PageFooter = function (_React$Component) {
                                 _react2.default.createElement(
                                     _reactRouter.Link,
                                     { to: '/klasy' },
-                                    'Klasy'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    _reactRouter.Link,
-                                    { to: '/omnie' },
-                                    'O mnie'
+                                    'Classes'
                                 )
                             )
                         )
@@ -28222,12 +28161,12 @@ var PageFooter = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             null,
-                            'Wszystkie grafiki na stronie pochodz\u0105 z gry World of Warcraft\xAE i nale\u017C\u0105 do \xA92004 Blizzard Entertainment, Inc.'
+                            'All images on site are from the game World of Warcraft\xAE and belongs to \xA92004 Blizzard Entertainment, Inc.'
                         ),
                         _react2.default.createElement(
                             'p',
                             null,
-                            '\xA92004 Blizzard Entertainment, Inc. Wszystkie prawa zastrze\u017Cone. World of Warcraft, Warcraft i Blizzard Entertainment s\u0105 znakami towarowymi lub zarejestrowanymi znakami towarowymi Blizzard Entertainment, Inc. w USA i/lub innych krajach.'
+                            '\xA92004 Blizzard Entertainment, Inc. All rights reserved. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.'
                         )
                     )
                 )
@@ -28242,9 +28181,661 @@ exports.default = PageFooter;
 
 /***/ }),
 /* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionRaces = function (_React$Component) {
+    _inherits(SectionRaces, _React$Component);
+
+    function SectionRaces() {
+        _classCallCheck(this, SectionRaces);
+
+        return _possibleConstructorReturn(this, (SectionRaces.__proto__ || Object.getPrototypeOf(SectionRaces)).apply(this, arguments));
+    }
+
+    _createClass(SectionRaces, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "section",
+                { className: "section-races-classes" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "grid-container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "grid-row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "grid-col-12" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "welcome" },
+                                _react2.default.createElement(
+                                    "h1",
+                                    null,
+                                    "Races"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "Whether as a stalwart defender of the Alliance, or a fierce guardian of the Horde, deciding which race to play will define who you'll fight for in this neverending war. Where do your loyalties lie?"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "grid-row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "grid-col-6" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "faction" },
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "Alliance"
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "logo" },
+                                    _react2.default.createElement("img", { className: "alliance", src: "images/allylogo.png" })
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image human" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Human",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Though humans are among the younger races on Azeroth, they have faced many challenges with fortitude and resilience."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image dwarf" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Dwarf",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "The bold and courageous dwarves are an ancient race descended from the earthen-beings of living stone created by the titans when the world was young."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image nelf" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Night Elf",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "The ancient and reclusive night elves have played a pivotal role in shaping Azeroth\u2019s fate throughout its history."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image gnome" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Gnome",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "The clever, spunky, and oftentimes eccentric gnomes present a unique paradox among the civilized races of Azeroth."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image draenei" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Draenei",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Armed with their unshakable faith in the Light, the draenei ventured to their embattled former home as steadfast members of the Alliance and defeated their ancient demonic rivals."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image worgen" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Worgen",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Behind the formidable Greymane Wall, a terrible curse transformed some of the stalwart citizens of the isolated kingdom of Gilneas into nightmarish lupine beasts known as worgen."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image panda" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Pandaren",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "The wise pandaren embrace harmony, and lead full lives of food, family and fights on Pandaria. A few leave their home to join the Alliance, where they embody righteousness and honor."
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "grid-col-6" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "faction" },
+                                _react2.default.createElement(
+                                    "span",
+                                    null,
+                                    "Horde"
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "logo" },
+                                    _react2.default.createElement("img", { className: "horde", src: "images/hordelogo.png" })
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image orc" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Orc",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Unlike the other races of the Horde, orcs are not native to Azeroth. Initially, they lived as shamanic clans on the lush world of Draenor."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image undead" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Undead",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "When the Lich King\u2019s grasp on his vast armies faltered after the Third War, a contingent of undead broke free of their master\u2019s iron will."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image tauren" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Tauren",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "The peaceful tauren\u2014known in their own tongue as the shu\u2019halo\u2014have long dwelled in Kalimdor, striving to preserve the balance of nature at the behest of their goddess, the Earth Mother."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image troll" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Troll",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "The savage trolls of Azeroth are infamous for their cruelty, dark mysticism, and seething hatred for all other races."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image belf" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Blood Elf",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "During the Third War, the glorious high elves of Quel\u2019Thalas were nearly scoured from Azeroth. Now, they struggle to rebuild their once-great society and overcome their dependence on magic."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image goblin" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Goblin",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Reforging old pacts with their collegues' one-time allies, the goblins of the Bilgewater Cartel have been welcomed into the Horde with open arms."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image pandh" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Pandaren",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "The wise pandaren embrace harmony, and lead full lives of food, family and fights on Pandaria. A few leave their home to side with the Horde and act decisively to protect themselves and others."
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return SectionRaces;
+}(_react2.default.Component);
+
+exports.default = SectionRaces;
+
+/***/ }),
+/* 249 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SectionRaces = function (_React$Component) {
+    _inherits(SectionRaces, _React$Component);
+
+    function SectionRaces() {
+        _classCallCheck(this, SectionRaces);
+
+        return _possibleConstructorReturn(this, (SectionRaces.__proto__ || Object.getPrototypeOf(SectionRaces)).apply(this, arguments));
+    }
+
+    _createClass(SectionRaces, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "section",
+                { className: "section-races-classes" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "grid-container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "grid-row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "grid-col-12" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "welcome" },
+                                _react2.default.createElement(
+                                    "h1",
+                                    null,
+                                    "Classes"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "From knights in shiny armor to skulking stalkers and cunning spellcasters, each class in World of Warcraft presents unique challenges and gameplay for you to master. What is your calling?"
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "grid-row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "grid-col-6" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image warrior" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Warrior",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Tank, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "For as long as war has raged, heroes from every race have aimed to master the art of battle. Warriors combine strength, leadership, and a vast knowledge of arms and armor to wreak havoc in glorious combat."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image hunter" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Hunter",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "From an early age, the call of the wild draws some adventurers from the comfort of their homes into the unforgiving primal world outside. Those who endure become hunters."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image priest" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Priest",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Healer, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Priests are devoted to the spiritual, and express their unwavering faith by serving the people. For millennia they have left behind the confines of their temples and the comfort of their shrines so they can support their allies in war-torn lands."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image shaman" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Shaman",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Healer, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Shaman are the spiritual leaders of their tribes and clans. They are masters of the elements, using spells and totems that heal or enhance their allies in battle while unleashing the fury of the elements upon their foes."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image warlock" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Warlock",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "In the face of demonic power, most heroes see death. Warlocks see only opportunity. Dominance is their aim, and they have found a path to it in the dark arts. These voracious spellcasters summon demonic minions to fight beside them."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image druid" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Driud",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Tank, Healer, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Druids harness the vast powers of nature to preserve balance and protect life. As master shapeshifters, druids can take on the forms of a variety of beasts, each focused on a specific combat role."
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "grid-col-6" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image paladin" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Paladin",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Tank, Healer, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "This is the call of the paladin: to protect the weak, to bring justice to the unjust, and to vanquish evil from the darkest corners of the world."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image rogue" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Rogue",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "For rogues, the only code is the contract, and their honor is purchased in gold. Free from the constraints of a conscience, these mercenaries rely on brutal and efficient tactics."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image dk" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Death Knight",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Tank, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "When the Lich King\u2019s control of his death knights was broken, his former champions sought revenge for the horrors committed under his command."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image mage" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Mage",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Students gifted with a keen intellect and unwavering discipline may walk the path of the mage. The arcane magic available to magi is both great and dangerous, and thus is revealed only to the most devoted practitioners."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image monk" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Monk",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Tank, Healer, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Bare-knuckle brawlers whose no-weapon styles were born in ancient Pandaria, monks are as diverse as the energy that surrounds them. They can shoulder deadly attacks through the haze of their brews, heal broken chi flows, and beat their enemies with wind-quick fists and feet."
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "box" },
+                                _react2.default.createElement("div", { className: "image dh" }),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "content" },
+                                    "Demon Hunter",
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Tank, Damage"
+                                    ),
+                                    _react2.default.createElement(
+                                        "p",
+                                        null,
+                                        "Demon hunters embrace the forbidden powers of the Legion. They make use of fel and chaotic magics, metamorphosis abilities, spectral sight, and hellish agility to hunt down and defeat even the most dangerous adversaries."
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return SectionRaces;
+}(_react2.default.Component);
+
+exports.default = SectionRaces;
 
 /***/ })
 /******/ ]);
