@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 <Router history={hashHistory}>
                     <Route path='/' component={Template}>
                         <IndexRoute component={SectionArmory}/>
-                        <Route path='/rasy' component={Races}/>
-                        <Route path='/klasy' component={Classes}/>
+                        <Route path='/races' component={Races}/>
+                        <Route path='/classes' component={Classes}/>
                     </Route>
                 </Router>
             );
