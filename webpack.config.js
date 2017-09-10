@@ -12,7 +12,7 @@ module.exports = {
     devServer: {
         inline: true,
         contentBase: './',
-        port: 8999
+        port: 3100
     },
     watch: true,
     module: {
@@ -38,24 +38,24 @@ module.exports = {
             disable: false,
             allChunks: true
         }),
-        // new BrowserSyncPlugin(
-        //     // BrowserSync options
-        //     {
-        //         // browse to http://localhost:3000/ during development
-        //         host: 'localhost',
-        //         port: 3100,
-        //         // proxy the Webpack Dev Server endpoint
-        //         // (which should be serving on http://localhost:3100/)
-        //         // through BrowserSync
-        //         proxy: 'http://localhost:8999/'
-        //     },
-        //     // plugin options
-        //     {
-        //         // prevent BrowserSync from reloading the page
-        //         // and let Webpack Dev Server take care of this
-        //         reload: true
-        //     }
-        // )
+        new BrowserSyncPlugin(
+            // BrowserSync options
+            {
+                // browse to http://localhost:3000/ during development
+                host: 'localhost',
+                port: 3300,
+                // proxy the Webpack Dev Server endpoint
+                // (which should be serving on http://localhost:3100/)
+                // through BrowserSync
+                proxy: 'http://localhost:3100/'
+            },
+            // plugin options
+            {
+                // prevent BrowserSync from reloading the page
+                // and let Webpack Dev Server take care of this
+                reload: true
+            }
+        )
 
     ]
 }

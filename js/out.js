@@ -13815,7 +13815,7 @@ var _sectionRaces = __webpack_require__(248);
 
 var _sectionRaces2 = _interopRequireDefault(_sectionRaces);
 
-var _sectionClasses = __webpack_require__(250);
+var _sectionClasses = __webpack_require__(249);
 
 var _sectionClasses2 = _interopRequireDefault(_sectionClasses);
 
@@ -13829,9 +13829,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-__webpack_require__(249);
-
-console.log("Simple WoW Armory");
+__webpack_require__(250);
 
 document.addEventListener('DOMContentLoaded', function () {
     var Template = function (_React$Component) {
@@ -13916,8 +13914,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         _reactRouter.Route,
                         { path: '/', component: Template },
                         _react2.default.createElement(_reactRouter.IndexRoute, { component: _sectionArmory2.default }),
-                        _react2.default.createElement(_reactRouter.Route, { path: '/rasy', component: Races }),
-                        _react2.default.createElement(_reactRouter.Route, { path: '/klasy', component: Classes })
+                        _react2.default.createElement(_reactRouter.Route, { path: '/races', component: Races }),
+                        _react2.default.createElement(_reactRouter.Route, { path: '/classes', component: Classes })
                     )
                 );
             }
@@ -25225,7 +25223,7 @@ var PageHeader = function (_React$Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouter.Link,
-                                    { to: '/rasy' },
+                                    { to: '/races' },
                                     'Races'
                                 )
                             ),
@@ -25234,7 +25232,7 @@ var PageHeader = function (_React$Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouter.Link,
-                                    { to: '/klasy' },
+                                    { to: '/classes' },
                                     'Classes'
                                 )
                             )
@@ -27646,6 +27644,10 @@ var _armoryImage = __webpack_require__(245);
 
 var _armoryImage2 = _interopRequireDefault(_armoryImage);
 
+var _errorMessage = __webpack_require__(251);
+
+var _errorMessage2 = _interopRequireDefault(_errorMessage);
+
 var _export = __webpack_require__(246);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -27711,7 +27713,8 @@ var ArmorySearch = function (_React$Component) {
             haste: null,
             mastery: null,
             versatility: null,
-            imageLink: null
+            imageLink: null,
+            errorStatus: false
         };
         return _this;
     }
@@ -27788,9 +27791,10 @@ var ArmorySearch = function (_React$Component) {
                     imageLink: linkData
                 });
             }).catch(function (error) {
-                console.log(error);
+
                 _this2.setState({
-                    data: false
+                    data: false,
+                    errorStatus: true
                 });
             });
         }
@@ -27798,10 +27802,15 @@ var ArmorySearch = function (_React$Component) {
         key: 'render',
         value: function render() {
             var component = void 0;
+
             if (this.state.data) {
                 component = _react2.default.createElement(_armoryImage2.default, this.state);
             } else {
-                component = null;
+                if (this.state.errorStatus) {
+                    component = _react2.default.createElement(_errorMessage2.default, null);
+                } else {
+                    component = null;
+                }
             }
             return _react2.default.createElement(
                 'div',
@@ -28140,7 +28149,7 @@ var PageFooter = function (_React$Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouter.Link,
-                                    { to: '/rasy' },
+                                    { to: '/races' },
                                     'Races'
                                 )
                             ),
@@ -28149,7 +28158,7 @@ var PageFooter = function (_React$Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouter.Link,
-                                    { to: '/klasy' },
+                                    { to: '/classes' },
                                     'Classes'
                                 )
                             )
@@ -28506,12 +28515,6 @@ exports.default = SectionRaces;
 
 /***/ }),
 /* 249 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28836,6 +28839,66 @@ var SectionRaces = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = SectionRaces;
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ErrorMessage = function (_React$Component) {
+    _inherits(ErrorMessage, _React$Component);
+
+    function ErrorMessage() {
+        _classCallCheck(this, ErrorMessage);
+
+        return _possibleConstructorReturn(this, (ErrorMessage.__proto__ || Object.getPrototypeOf(ErrorMessage)).apply(this, arguments));
+    }
+
+    _createClass(ErrorMessage, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "error" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Something went wrong, please try again with different data."
+                )
+            );
+        }
+    }]);
+
+    return ErrorMessage;
+}(_react2.default.Component);
+
+exports.default = ErrorMessage;
 
 /***/ })
 /******/ ]);

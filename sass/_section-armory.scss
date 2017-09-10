@@ -64,7 +64,7 @@
                     text-align: center;
                     line-height: 25px;
                     margin-top: 10px;
-                    border: 1px solid #352011;
+                    border: 1.2px solid #F8B700;
                     border-radius: 10% 10%;
                     background-image: url('../images/sitenav-bar-bg.jpg');
 
@@ -135,18 +135,6 @@
                         }
                         @media screen and (min-width: 768px){
                             font-size: 1.5rem;
-                        }
-                        :after{
-                            content: '';
-                            width: 100px;
-                            height: 100px;
-                            background-color: #F8B700;
-                            border-radius: 100px;
-                            position: absolute;
-                            top: 0px;
-                            left: 0px;
-
-
                         }
                     }
                 }

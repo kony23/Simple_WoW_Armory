@@ -9,11 +9,7 @@ import {Router, Route, Link, IndexLink, IndexRoute, hashHistory} from 'react-rou
 require('../sass/main.scss');
 
 
-
-console.log("Simple WoW Armory");
-
 document.addEventListener('DOMContentLoaded', function(){
-
 
     class Template extends React.Component{
         render(){

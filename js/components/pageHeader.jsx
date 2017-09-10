@@ -14,8 +14,8 @@ export default class PageHeader extends React.Component{
                         <nav className="page-nav">
                             <ul>
                                 <li><Link to='/'>Armory</Link></li>
-                                <li><Link to='/rasy'>Races</Link></li>
-                                <li><Link to='/klasy'>Classes</Link></li>
+                                <li><Link to='/races'>Races</Link></li>
+                                <li><Link to='/classes'>Classes</Link></li>
                             </ul>
                         </nav>
                     </div>

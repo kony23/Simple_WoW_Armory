@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ArmoryImage from './armoryImage.jsx';
+import ErrorMessage from './errorMessage.jsx';
 import {getRace, getClass} from './export.js';
 
 export default class ArmorySearch extends React.Component{
@@ -26,6 +27,7 @@ export default class ArmorySearch extends React.Component{
             mastery: null,
             versatility: null,
             imageLink: null,
+            errorStatus: false,
         }
     }
 
@@ -128,20 +130,26 @@ export default class ArmorySearch extends React.Component{
                     imageLink: linkData,
                 })
                 }).catch( error => {
-                    console.log(error);
+
                     this.setState({
-                        data: false
+                        data: false,
+                        errorStatus: true
                     });
 
                 });
     }
-
     render(){
         let component;
+
         if(this.state.data){
             component = <ArmoryImage {...this.state}/>;
-        } else {
-            component = null;
+        } else{
+            if(this.state.errorStatus){
+                component = <ErrorMessage/>
+            } else{
+                component = null;    
+            }
+
         }
         return(
             <div>

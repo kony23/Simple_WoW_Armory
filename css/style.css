@@ -176,7 +176,7 @@
           text-align: center;
           line-height: 25px;
           margin-top: 10px;
-          border: 1px solid #352011;
+          border: 1.2px solid #F8B700;
           border-radius: 10% 10%;
           background-image: url("../images/sitenav-bar-bg.jpg"); }
           .section-armory .container .armory-search form .form-button span:hover {
@@ -232,15 +232,6 @@
             @media screen and (min-width: 768px) {
               .section-armory .container .armory-image .armory-stats .armory-stats-box span {
                 font-size: 1.5rem; } }
-            .section-armory .container .armory-image .armory-stats .armory-stats-box span :after {
-              content: '';
-              width: 100px;
-              height: 100px;
-              background-color: #F8B700;
-              border-radius: 100px;
-              position: absolute;
-              top: 0px;
-              left: 0px; }
 
 /* ---- section-races ---- */
 .section-races-classes .box {
@@ -408,11 +399,15 @@ body {
 .wrapper {
   background: #211510;
   background: url("../images/background.jpg") no-repeat center center fixed;
-  background-size: auto;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column; }
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      background-size: auto; } }
 
 .build {
   height: 500px;
@@ -421,3 +416,12 @@ body {
   .build h1 {
     margin-top: 80px;
     color: #fff; }
+
+.error p {
+  font-size: 0.5rem; }
+  @media screen and (min-width: 420px) {
+    .error p {
+      font-size: 1rem; } }
+  @media screen and (min-width: 768px) {
+    .error p {
+      font-size: 1.5rem; } }
