@@ -58,7 +58,7 @@ export default class SectionRaces extends React.Component{
                             <div className="box">
                                 <div className="image druid"></div>
                                 <div className="content">
-                                    Driud
+                                    Druid
                                     <p>Tank, Healer, Damage</p>
                                     <p>Druids harness the vast powers of nature to preserve balance and protect life. As master shapeshifters, druids can take on the forms of a variety of beasts, each focused on a specific combat role.</p>
                                 </div>
